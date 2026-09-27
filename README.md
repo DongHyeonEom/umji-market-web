@@ -1,4 +1,4 @@
-# Umji Market Web
+# 엄지마켓 Web
 
 React 기반 WebView 화면
 
