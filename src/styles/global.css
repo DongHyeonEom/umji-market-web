@@ -1,0 +1,42 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #202124;
+  background: #f7f8fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+* { box-sizing: border-box; }
+body { min-width: 320px; min-height: 100vh; margin: 0; }
+button, input { font: inherit; }
+button { min-height: 48px; border: 0; border-radius: 12px; padding: 0 20px; color: #fff; background: #285a46; font-weight: 700; cursor: pointer; }
+button:disabled { cursor: wait; opacity: 0.65; }
+.page { width: min(100% - 32px, 1080px); margin: 0 auto; padding: 48px 0; }
+.page--narrow { width: min(100% - 32px, 480px); padding-top: clamp(48px, 12vh, 120px); }
+.brand-block { margin-bottom: 28px; }
+.brand-block h1, .app-header h1, .status-card h1 { margin: 4px 0 10px; font-size: clamp(2rem, 7vw, 2.6rem); line-height: 1.2; }
+.brand-block p, .status-card p, .empty-state p { color: #555b62; line-height: 1.65; }
+.eyebrow { margin: 0; color: #285a46 !important; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; }
+.form-card, .status-card { display: grid; gap: 16px; border: 1px solid #e0e4e8; border-radius: 20px; padding: 24px; background: #fff; box-shadow: 0 8px 32px rgb(24 39 75 / 6%); }
+.form-card label { font-weight: 700; }
+.form-card input { width: 100%; min-height: 52px; border: 1px solid #b9c0c8; border-radius: 12px; padding: 0 14px; }
+.form-card input:focus-visible, button:focus-visible { outline: 3px solid #8bbba5; outline-offset: 2px; }
+.form-message { margin: 0; color: #a4262c; }
+.helper-text { margin: 0; color: #626970; font-size: 0.9rem; line-height: 1.55; }
+.button--secondary { color: #285a46; border: 1px solid #b9c8c0; background: #fff; }
+.status-card { padding: 32px; }
+.status-card h1 { font-size: 1.8rem; }
+.app-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid #e0e4e8; padding-bottom: 20px; }
+.app-header h1 { font-size: 1.6rem; }
+.empty-state { margin-top: 32px; border: 1px dashed #b9c0c8; border-radius: 20px; padding: 32px; background: #fff; }
+.empty-state h2 { margin-top: 0; }
+
+@media (max-width: 480px) {
+  .page--narrow { padding-top: 48px; }
+  .form-card, .status-card { padding: 20px; }
+  .app-header { align-items: flex-start; }
+}
