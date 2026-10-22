@@ -13,6 +13,7 @@
 * { box-sizing: border-box; }
 body { min-width: 320px; min-height: 100vh; margin: 0; }
 button, input { font: inherit; }
+a { color: inherit; }
 button { min-height: 48px; border: 0; border-radius: 12px; padding: 0 20px; color: #fff; background: #285a46; font-weight: 700; cursor: pointer; }
 button:disabled { cursor: wait; opacity: 0.65; }
 .page { width: min(100% - 32px, 1080px); margin: 0 auto; padding: 48px 0; }
@@ -27,13 +28,33 @@ button:disabled { cursor: wait; opacity: 0.65; }
 .form-card input:focus-visible, button:focus-visible { outline: 3px solid #8bbba5; outline-offset: 2px; }
 .form-message { margin: 0; color: #a4262c; }
 .helper-text { margin: 0; color: #626970; font-size: 0.9rem; line-height: 1.55; }
-.button--secondary { color: #285a46; border: 1px solid #b9c8c0; background: #fff; }
 .status-card { padding: 32px; }
 .status-card h1 { font-size: 1.8rem; }
 .app-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid #e0e4e8; padding-bottom: 20px; }
 .app-header h1 { font-size: 1.6rem; }
 .empty-state { margin-top: 32px; border: 1px dashed #b9c0c8; border-radius: 20px; padding: 32px; background: #fff; }
 .empty-state h2 { margin-top: 0; }
+.home-actions { margin-top: 20px; }
+.button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; border-radius: 12px; padding: 0 20px; color: #fff; background: #285a46; font-weight: 700; text-decoration: none; }
+.button--secondary { color: #285a46; border: 1px solid #b9c8c0; background: #fff; }
+.shipment-section { margin-top: 28px; }
+.shipment-heading, .shipment-card__top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.shipment-heading h2 { margin: 0 0 6px; font-size: 1.35rem; }
+.shipment-heading p, .shipment-tracking { margin: 0; color: #555b62; line-height: 1.55; }
+.shipment-count { color: #285a46; font-weight: 800; white-space: nowrap; }
+.shipment-list { display: grid; gap: 14px; margin-top: 20px; }
+.shipment-card { border: 1px solid #e0e4e8; border-radius: 16px; padding: 20px; background: #fff; box-shadow: 0 4px 18px rgb(24 39 75 / 5%); }
+.shipment-key-label { margin: 0 0 4px; color: #626970; font-size: .85rem; }
+.shipment-card h3 { margin: 0; font-size: 1.25rem; letter-spacing: .02em; }
+.shipment-status { border-radius: 999px; padding: 7px 12px; background: #f1f3f5; color: #444b52; font-size: .88rem; font-weight: 700; white-space: nowrap; }
+.shipment-status--in_transit { background: #e7f1eb; color: #285a46; }
+.shipment-status--delivered { background: #e9eef8; color: #34527d; }
+.shipment-tracking { margin-top: 14px; }
+.shipment-items { display: grid; gap: 8px; margin: 14px 0 0; padding: 14px 0 0; border-top: 1px solid #edf0f2; list-style: none; }
+.shipment-items li { display: flex; justify-content: space-between; gap: 12px; line-height: 1.45; }
+.shipment-items li span { color: #626970; white-space: nowrap; }
+.shipment-error { border-radius: 12px; padding: 16px; color: #8c1d24; background: #fff1f0; }
+.shipment-empty { margin-top: 20px; border: 1px dashed #b9c0c8; border-radius: 16px; padding: 24px; color: #555b62; background: #fff; }
 
 @media (max-width: 480px) {
   .page--narrow { padding-top: 48px; }
